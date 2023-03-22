@@ -16,13 +16,13 @@ import java.util.HashMap;
 import java.util.Map;
 
 // /front-controller/v2/members/new-form
-@WebServlet(name="fontControllerServletV2", urlPatterns = "/front-controller/v2/*") // /front-controller/v1를 포함한 하위 모든 요청은 이 서블릿에서 받아들인다.
+@WebServlet(name="frontControllerServletV2", urlPatterns = "/front-controller/v2/*") // /front-controller/v1를 포함한 하위 모든 요청은 이 서블릿에서 받아들인다.
                                                                                     // 예) /front-controller/v1/a ,  /front-controller/v1/a/b
-public class FontControllerServletV2 extends HttpServlet {
+public class FrontControllerServletV2 extends HttpServlet {
 
     private Map<String, ControllerV2> controllerMap = new HashMap<>();
 
-    public FontControllerServletV2() {
+    public FrontControllerServletV2() {
         controllerMap.put("/front-controller/v2/members/new-form", new MemberFormControllerV2());
         controllerMap.put("/front-controller/v2/members/save", new MemberSaveControllerV2());
         controllerMap.put("/front-controller/v2/members", new MemberListControllerV2());
