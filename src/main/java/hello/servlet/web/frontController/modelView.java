@@ -7,11 +7,11 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Setter@Getter
-public class ModelView {
+public class modelView {
     private String viewName;
     private Map<String,Object> model = new HashMap<>();
 
-    public ModelView(String viewName) {
+    public modelView(String viewName) {
         this.viewName = viewName;
     }
 }

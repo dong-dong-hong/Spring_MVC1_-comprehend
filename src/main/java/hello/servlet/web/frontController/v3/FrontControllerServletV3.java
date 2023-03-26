@@ -1,11 +1,8 @@
 package hello.servlet.web.frontController.v3;
 
 
-import hello.servlet.web.frontController.ModelView;
+import hello.servlet.web.frontController.modelView;
 import hello.servlet.web.frontController.MyView;
-import hello.servlet.web.frontController.v2.controller.MemberFormControllerV2;
-import hello.servlet.web.frontController.v2.controller.MemberListControllerV2;
-import hello.servlet.web.frontController.v2.controller.MemberSaveControllerV2;
 import hello.servlet.web.frontController.v3.controller.MemberFormControllerV3;
 import hello.servlet.web.frontController.v3.controller.MemberListControllerV3;
 import hello.servlet.web.frontController.v3.controller.MemberSaveControllerV3;
@@ -42,7 +39,7 @@ public class FrontControllerServletV3 extends HttpServlet {
         }
 
         Map<String,String> paramMap = createParamMap(request);
-        ModelView mv = controller.process(paramMap);
+        modelView mv = controller.process(paramMap);
         
         String viewName = mv.getViewName(); // 논리이름 new-form
         MyView view = viewResolver(viewName);

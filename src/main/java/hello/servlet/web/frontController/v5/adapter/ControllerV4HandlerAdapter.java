@@ -1,12 +1,11 @@
 package hello.servlet.web.frontController.v5.adapter;
 
-import hello.servlet.web.frontController.ModelView;
+import hello.servlet.web.frontController.modelView;
 import hello.servlet.web.frontController.v4.ControllerV4;
 import hello.servlet.web.frontController.v5.MyHandlerAdapter;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import org.springframework.ui.Model;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -19,7 +18,7 @@ public class ControllerV4HandlerAdapter implements MyHandlerAdapter {
     }
 
     @Override
-    public ModelView handle(HttpServletRequest request, HttpServletResponse response, Object handler) throws ServletException, IOException {
+    public modelView handle(HttpServletRequest request, HttpServletResponse response, Object handler) throws ServletException, IOException {
        // MemberFormControllerV4
         ControllerV4 controller = (ControllerV4) handler;
 
@@ -28,7 +27,7 @@ public class ControllerV4HandlerAdapter implements MyHandlerAdapter {
 
         String viewName = controller.process(paramMap,model);
 
-       ModelView mv = new ModelView(viewName);
+       modelView mv = new modelView(viewName);
        mv.setModel(model);
 
         return mv;

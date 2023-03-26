@@ -1,6 +1,6 @@
 package hello.servlet.web.frontController.v5;
 
-import hello.servlet.web.frontController.ModelView;
+import hello.servlet.web.frontController.modelView;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -11,5 +11,5 @@ public interface MyHandlerAdapter {
 
     boolean support(Object handler);
 
-    ModelView handle(HttpServletRequest request, HttpServletResponse response, Object handler) throws ServletException, IOException;
+    modelView handle(HttpServletRequest request, HttpServletResponse response, Object handler) throws ServletException, IOException;
 }

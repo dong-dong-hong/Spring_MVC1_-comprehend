@@ -1,6 +1,6 @@
 package hello.servlet.web.frontController.v5.adapter;
 
-import hello.servlet.web.frontController.ModelView;
+import hello.servlet.web.frontController.modelView;
 import hello.servlet.web.frontController.v3.ControllerV3;
 import hello.servlet.web.frontController.v5.MyHandlerAdapter;
 import jakarta.servlet.ServletException;
@@ -18,7 +18,7 @@ public class ControllerV3HandlerAdapter implements MyHandlerAdapter {
     }
 
     @Override
-    public ModelView handle(HttpServletRequest request, HttpServletResponse response, Object handler) throws ServletException, IOException {
+    public modelView handle(HttpServletRequest request, HttpServletResponse response, Object handler) throws ServletException, IOException {
         // MemberFormControllerV3
         ControllerV3 controller = (ControllerV3) handler;
         Map<String, String> paramMap = createParamMap(request);
